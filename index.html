@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>HinosIEB - Biblioteca de Partituras</title>
+    <title>IEB - Biblioteca de Partituras</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
-        <!-- Header -->
         <header class="header">
             <div class="header-content">
                 <div class="logo-area">
                     <i class="fas fa-music"></i>
-                    <h1>Hinos<span>IEB</span></h1>
+                    <h1>Hinos da <span>IEB</span></h1>
                 </div>
                 <p class="subtitle">Biblioteca Digital de Partituras</p>
             </div>
@@ -24,7 +23,6 @@
             </button>
         </header>
 
-        <!-- Search Bar -->
         <div class="search-section">
             <div class="search-box">
                 <i class="fas fa-search"></i>
@@ -35,24 +33,23 @@
             </div>
         </div>
 
-        <!-- Categories Tabs -->
         <div class="categories-section">
             <div class="tabs-container">
                 <button class="tab-btn active" data-category="all">
                     <i class="fas fa-th-large"></i>
                     <span>Todos</span>
                 </button>
-                <button class="tab-btn" data-category="1a_partes">
+                <button class="tab-btn" data-category="1a_parte">
                     <i class="fas fa-1"></i>
-                    <span>1ª Partes</span>
+                    <span>1ª Parte</span>
                 </button>
-                <button class="tab-btn" data-category="2a_partes">
+                <button class="tab-btn" data-category="2a_parte">
                     <i class="fas fa-2"></i>
-                    <span>2ª Partes</span>
+                    <span>2ª Parte</span>
                 </button>
-                <button class="tab-btn" data-category="3a_partes">
+                <button class="tab-btn" data-category="3a_parte">
                     <i class="fas fa-3"></i>
-                    <span>3ª Partes</span>
+                    <span>3ª Parte</span>
                 </button>
                 <button class="tab-btn" data-category="avulsos">
                     <i class="fas fa-file-alt"></i>
@@ -65,7 +62,6 @@
             </div>
         </div>
 
-        <!-- Results Info -->
         <div class="results-info">
             <span id="resultCount"></span>
             <div class="last-update">
@@ -74,7 +70,6 @@
             </div>
         </div>
 
-        <!-- Sheet Music Grid -->
         <main class="sheet-music-grid" id="sheetMusicGrid">
             <div class="loading-spinner">
                 <i class="fas fa-spinner fa-pulse"></i>
@@ -82,9 +77,8 @@
             </div>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
-            <p>© 2025 HinosIEB - Todas as partituras são de uso exclusivo da igreja</p>
+            <p>© 2025 IEB - Todas as partituras são de uso exclusivo da igreja</p>
             <p class="footer-note">Clique em qualquer partitura para abrir o PDF</p>
         </footer>
     </div>
