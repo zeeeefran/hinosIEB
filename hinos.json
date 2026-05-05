@@ -1,4 +1,4 @@
-[
+8[
   {
     "numero": "9",
     "parte": "1ª parte",
@@ -9,9 +9,9 @@
   },
   {
     "numero": "9",
-    "parte": "1ª partes",
+    "parte": "1ª parte",
     "instrumento": "Violino 2",
-    "categoria": "1a_parte",
+    "categoria": "1a_partes",
     "arquivo": "9 - 1 parte-Violino_2.pdf",
     "atualizado": false
   },
