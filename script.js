@@ -1,9 +1,7 @@
-// Configuração
 let allHinos = [];
 let currentCategory = 'all';
 let currentSearchTerm = '';
 
-// Referências DOM
 const sheetMusicGrid = document.getElementById('sheetMusicGrid');
 const searchInput = document.getElementById('searchInput');
 const clearSearchBtn = document.getElementById('clearSearch');
@@ -11,7 +9,6 @@ const resultCountSpan = document.getElementById('resultCount');
 const lastCommitDateSpan = document.getElementById('lastCommitDate');
 const themeToggle = document.getElementById('themeToggle');
 
-// Carregar dados do JSON
 async function loadHinos() {
     try {
         const response = await fetch('hinos.json');
@@ -31,16 +28,13 @@ async function loadHinos() {
     }
 }
 
-// Filtrar hinos
 function filterHinos() {
     let filtered = allHinos;
     
-    // Filtrar por categoria
     if (currentCategory !== 'all') {
         filtered = filtered.filter(hino => hino.categoria === currentCategory);
     }
     
-    // Filtrar por busca
     if (currentSearchTerm.trim() !== '') {
         const term = currentSearchTerm.toLowerCase();
         filtered = filtered.filter(hino => 
@@ -53,17 +47,6 @@ function filterHinos() {
     return filtered;
 }
 
-// Verificar se arquivo foi atualizado recentemente (usando data do commit do GitHub)
-// Esta é uma simulação - você pode ajustar o threshold conforme necessário
-function isRecentlyUpdated(fileDate) {
-    if (!fileDate) return false;
-    const now = new Date();
-    const fileDateObj = new Date(fileDate);
-    const diffDays = (now - fileDateObj) / (1000 * 60 * 60 * 24);
-    return diffDays <= 30; // Considera "recente" arquivos com menos de 30 dias
-}
-
-// Renderizar hinos
 function renderHinos() {
     const filtered = filterHinos();
     
@@ -82,7 +65,6 @@ function renderHinos() {
     resultCountSpan.textContent = `${filtered.length} ${filtered.length === 1 ? 'resultado' : 'resultados'}`;
     
     sheetMusicGrid.innerHTML = filtered.map(hino => {
-        // Verificar se o PDF existe (opcional - pode remover se não precisar)
         const pdfPath = `pdfs/${hino.categoria}/${hino.arquivo}`;
         
         return `
@@ -102,7 +84,6 @@ function renderHinos() {
         `;
     }).join('');
     
-    // Adicionar eventos de clique nos cards
     document.querySelectorAll('.sheet-card').forEach(card => {
         card.addEventListener('click', () => {
             const pdfPath = card.dataset.pdf;
@@ -111,7 +92,6 @@ function renderHinos() {
     });
 }
 
-// Obter data do último commit do GitHub
 async function getLastCommitDate() {
     try {
         const response = await fetch('https://api.github.com/repos/zeeeefran/hinosIEB/commits?per_page=1');
@@ -135,7 +115,6 @@ async function getLastCommitDate() {
     }
 }
 
-// Configurar busca instantânea
 searchInput.addEventListener('input', (e) => {
     currentSearchTerm = e.target.value;
     clearSearchBtn.style.display = currentSearchTerm ? 'block' : 'none';
@@ -149,20 +128,15 @@ clearSearchBtn.addEventListener('click', () => {
     renderHinos();
 });
 
-// Configurar abas de categoria
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        // Atualizar classe ativa
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
-        // Atualizar categoria
         currentCategory = btn.dataset.category;
         renderHinos();
     });
 });
 
-// Modo noturno
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
@@ -187,6 +161,5 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Inicializar
 initTheme();
 loadHinos();
