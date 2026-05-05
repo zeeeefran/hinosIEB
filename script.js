@@ -114,7 +114,7 @@ function renderHinos() {
 // Obter data do último commit do GitHub
 async function getLastCommitDate() {
     try {
-        const response = await fetch('https://api.github.com/repos/seu-usuario/HinosIEB/commits?per_page=1');
+        const response = await fetch('https://api.github.com/repos/zeeeefran/hinosIEB/commits?per_page=1');
         if (response.ok) {
             const commits = await response.json();
             if (commits.length > 0) {
