@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="app-container">
+
         <header class="header">
             <div class="header-content">
                 <div class="logo-area">
@@ -18,10 +19,83 @@
                 </div>
                 <p class="subtitle">Biblioteca Digital de Partituras</p>
             </div>
-            <button id="themeToggle" class="theme-btn" aria-label="Modo noturno">
+            <button id="themeToggle" class="theme-btn" aria-label="Alternar tema">
                 <i class="fas fa-moon"></i>
             </button>
         </header>
+
+        <!-- ==========================================
+             AVISOS
+             Para adicionar um aviso, copie um bloco
+             <div class="notice-card type-???"> abaixo.
+
+             Tipos disponíveis (troque o type-???):
+               type-ensaio  → azul   (datas de ensaio)
+               type-novo    → verde  (novas partituras)
+               type-aviso   → laranja (avisos importantes)
+               type-info    → cinza-azul (informações gerais)
+
+             Ícones sugeridos (troque o fa-???):
+               fa-calendar-day  → datas
+               fa-music         → partituras
+               fa-triangle-exclamation → avisos
+               fa-circle-info   → informações
+        =========================================== -->
+        <section class="notices-section">
+            <div class="notices-header" onclick="toggleNotices()">
+                <i class="fas fa-bell"></i>
+                <h2>Avisos</h2>
+                <span class="notices-count" id="noticesCount">0</span>
+                <button class="notices-toggle" id="noticesToggleBtn" aria-label="Mostrar/ocultar avisos">
+                    Ocultar
+                </button>
+            </div>
+
+            <div class="notices-list" id="noticesList">
+
+                <!-- AVISO 1 — Edite ou remova conforme necessário -->
+                <div class="notice-card type-ensaio">
+                    <i class="fas fa-calendar-day notice-icon"></i>
+                    <div class="notice-body">
+                        <p class="notice-title">Ensaio — Sábado, 30/05</p>
+                        <p class="notice-text">Ensaio geral às 18h. Trazer partituras dos hinos.</p>
+                        <span class="notice-date">
+                            <i class="fas fa-clock"></i> Adicionado em 05/05/2025
+                        </span>
+                    </div>
+                </div>
+
+                <!-- AVISO 2 — Edite ou remova conforme necessário -->
+                <div class="notice-card type-novo">
+                    <i class="fas fa-music notice-icon"></i>
+                    <div class="notice-body">
+                        <p class="notice-title">Novas partituras adicionadas</p>
+                        <p class="notice-text">Hinos 88, 89 e 90 já estão disponíveis na biblioteca — categoria Cânticos.</p>
+                        <span class="notice-date">
+                            <i class="fas fa-clock"></i> Adicionado em 03/05/2025
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- 
+                    MODELO PARA NOVO AVISO — copie e cole acima:
+
+                <div class="notice-card type-info">
+                    <i class="fas fa-circle-info notice-icon"></i>
+                    <div class="notice-body">
+                        <p class="notice-title">Título do aviso</p>
+                        <p class="notice-text">Descrição detalhada do aviso aqui.</p>
+                        <span class="notice-date">
+                            <i class="fas fa-clock"></i> Adicionado em DD/MM/AAAA
+                        </span>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </section>
+        <!-- ========== FIM DOS AVISOS ========== -->
 
         <div class="search-section">
             <div class="search-box">
@@ -78,11 +152,40 @@
         </main>
 
         <footer class="footer">
-            <p>© 2025 IEB - Todas as partituras são de uso exclusivo da igreja</p>
-            <p class="footer-note">Clique em qualquer partitura para abrir o PDF</p>
+            <p>© 2025 IEB — Todas as partituras são de uso exclusivo da igreja</p>
+            <p>Clique em qualquer partitura para abrir o PDF</p>
         </footer>
+
     </div>
 
     <script src="script.js"></script>
+    <script>
+        /* ── Tema ── */
+        const themeBtn = document.getElementById('themeToggle');
+        const icon = themeBtn.querySelector('i');
+        const saved = localStorage.getItem('theme') || 'dark';
+        if (saved === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            icon.className = 'fas fa-sun';
+        }
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+            icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+            localStorage.setItem('theme', isLight ? 'dark' : 'light');
+        });
+
+        /* ── Contador de avisos ── */
+        const notices = document.querySelectorAll('#noticesList .notice-card');
+        document.getElementById('noticesCount').textContent = notices.length;
+
+        /* ── Toggle avisos ── */
+        function toggleNotices() {
+            const list = document.getElementById('noticesList');
+            const btn  = document.getElementById('noticesToggleBtn');
+            const collapsed = list.classList.toggle('collapsed');
+            btn.textContent = collapsed ? 'Mostrar' : 'Ocultar';
+        }
+    </script>
 </body>
 </html>
