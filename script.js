@@ -183,6 +183,90 @@ if (themeToggle) {
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
     });
+
+    // ========== FUNÇÕES DOS AVISOS ==========
+
+// Função para contar avisos visíveis e atualizar o contador
+function updateNoticesCount() {
+    const noticesList = document.getElementById('noticesList');
+    const noticesCount = document.getElementById('noticesCount');
+    
+    if (!noticesList || !noticesCount) return;
+    
+    // Conta apenas avisos que NÃO estão ocultos (filtra se tiver classe 'hidden')
+    const visibleNotices = document.querySelectorAll('#noticesList .notice-card:not(.hidden)');
+    const count = visibleNotices.length;
+    
+    noticesCount.textContent = count;
+    
+    // Se não houver avisos, mostra 0 e pode esconder a seção se quiser
+    if (count === 0) {
+        noticesCount.style.opacity = '0.5';
+    } else {
+        noticesCount.style.opacity = '1';
+    }
+}
+
+// Função para alternar (mostrar/ocultar) a lista de avisos
+function toggleNotices() {
+    const noticesList = document.getElementById('noticesList');
+    const toggleBtn = document.getElementById('noticesToggleBtn');
+    
+    if (!noticesList || !toggleBtn) return;
+    
+    if (noticesList.classList.contains('hidden')) {
+        noticesList.classList.remove('hidden');
+        toggleBtn.textContent = 'Ocultar';
+        localStorage.setItem('noticesVisible', 'true');
+    } else {
+        noticesList.classList.add('hidden');
+        toggleBtn.textContent = 'Mostrar';
+        localStorage.setItem('noticesVisible', 'false');
+    }
+}
+
+// Função para carregar o estado salvo dos avisos (se ficou oculto ou visível)
+function loadNoticesState() {
+    const noticesList = document.getElementById('noticesList');
+    const toggleBtn = document.getElementById('noticesToggleBtn');
+    
+    if (!noticesList || !toggleBtn) return;
+    
+    const savedState = localStorage.getItem('noticesVisible');
+    
+    // Se nunca foi salvo, padrão = visível (true)
+    if (savedState === 'false') {
+        noticesList.classList.add('hidden');
+        toggleBtn.textContent = 'Mostrar';
+    } else {
+        noticesList.classList.remove('hidden');
+        toggleBtn.textContent = 'Ocultar';
+    }
+}
+
+// Inicializar avisos quando a página carregar
+function initNotices() {
+    updateNoticesCount();
+    loadNoticesState();
+    
+    // Adiciona evento de clique no header dos avisos
+    const header = document.querySelector('.notices-header');
+    if (header) {
+        header.onclick = function(e) {
+            // Evita que o clique no botão dispare duas vezes
+            if (e.target.closest('#noticesToggleBtn')) return;
+            toggleNotices();
+        };
+    }
+}
+
+// Chame esta função na inicialização (junto com as outras)
+// Adicione esta linha no final da função que carrega a página ou chame assim:
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNotices);
+} else {
+    initNotices();
+}
 }
 
 // Inicializar
