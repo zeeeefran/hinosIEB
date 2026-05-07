@@ -95,7 +95,6 @@ function renderHinos() {
         `;
     }).join('');
     
-    // Adicionar eventos de clique nos cards
     document.querySelectorAll('.sheet-card').forEach(card => {
         card.addEventListener('click', () => {
             const pdfPath = card.dataset.pdf;
@@ -125,12 +124,12 @@ async function getLastCommitDate() {
         }
         throw new Error('Não foi possível obter a data');
     } catch (error) {
-        console.error('Erro ao obter data do commit:', error);
-        lastCommitDateSpan.innerHTML = 'Data da última sincronização não disponível';
+        console.error('Erro obter data commit:', error);
+        lastCommitDateSpan.innerHTML = 'Data não disponível';
     }
 }
 
-// Configurar busca instantânea
+// Busca instantânea
 if (searchInput) {
     searchInput.addEventListener('input', (e) => {
         currentSearchTerm = e.target.value;
@@ -148,7 +147,7 @@ if (clearSearchBtn) {
     });
 }
 
-// Configurar abas de categoria
+// Abas de categoria
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -183,25 +182,21 @@ if (themeToggle) {
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
     });
+}
 
-    // ========== FUNÇÕES DOS AVISOS ==========
+// ========== FUNÇÕES DOS AVISOS ==========
 
-// ========== SISTEMA DE AVISOS ==========
-
-// Função para contar avisos visíveis
 function updateNoticesCount() {
     const noticesList = document.getElementById('noticesList');
     const noticesCount = document.getElementById('noticesCount');
     
     if (!noticesList || !noticesCount) return;
     
-    // Conta apenas avisos que NÃO estão ocultos
     const visibleNotices = document.querySelectorAll('#noticesList .notice-card:not(.hidden)');
     const count = visibleNotices.length;
     
     noticesCount.textContent = count;
     
-    // Se não houver avisos, mostra 0 com opacidade menor
     if (count === 0) {
         noticesCount.style.opacity = '0.5';
     } else {
@@ -209,7 +204,6 @@ function updateNoticesCount() {
     }
 }
 
-// Função para alternar (mostrar/ocultar) os avisos
 function toggleNotices() {
     const noticesList = document.getElementById('noticesList');
     const toggleBtn = document.getElementById('noticesToggleBtn');
@@ -227,7 +221,6 @@ function toggleNotices() {
     }
 }
 
-// Função para carregar o estado salvo
 function loadNoticesState() {
     const noticesList = document.getElementById('noticesList');
     const toggleBtn = document.getElementById('noticesToggleBtn');
@@ -245,39 +238,31 @@ function loadNoticesState() {
     }
 }
 
-// Inicializar avisos
 function initNotices() {
     updateNoticesCount();
     loadNoticesState();
     
-    // Adiciona evento de clique no header
     const header = document.getElementById('noticesHeader');
     const toggleBtn = document.getElementById('noticesToggleBtn');
     
     if (header) {
         header.addEventListener('click', function(e) {
-            // Se clicou no botão, não faz nada (o botão tem seu próprio evento)
-            if (e.target === toggleBtn || toggleBtn.contains(e.target)) {
+            if (e.target === toggleBtn || (toggleBtn && toggleBtn.contains(e.target))) {
                 return;
             }
             toggleNotices();
         });
     }
     
-    // Evento separado para o botão
     if (toggleBtn) {
         toggleBtn.addEventListener('click', function(e) {
-            e.stopPropagation(); // Impede que o clique no botão ative o header também
+            e.stopPropagation();
             toggleNotices();
         });
     }
 }
 
-// Inicializa quando a página carregar
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNotices);
-} else {
-    initNotices();
-}
-}
-
+// Inicializar tudo
+initTheme();
+loadHinos();
+initNotices();
