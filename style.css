@@ -305,8 +305,8 @@ body {
 /* ============ Grid de partituras ============ */
 .sheet-music-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    gap: 0.85rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
     margin-bottom: 3rem;
 }
 
@@ -315,12 +315,16 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 1.1rem 1.25rem 1.1rem 1.25rem;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
     transition: all .25s ease;
     cursor: pointer;
-    display: flex; align-items: center; justify-content: space-between;
-    box-shadow: var(--shadow-card); gap: 0.8rem;
-    text-decoration: none; color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-card);
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
     overflow: hidden;
 }
 .sheet-card::before {
@@ -441,11 +445,14 @@ body {
     .tab-btn span { display: none; }
     .tab-btn i    { font-size: 0.95rem; }
     .tab-btn      { padding: 0.6rem 0.75rem; }
-    .sheet-music-grid { grid-template-columns: 1fr; }
+    .sheet-music-grid { 
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
     .notice-card { padding: 0.85rem 1rem; }
     .card-number { font-size: 1.35rem; }
+    .sheet-card { padding: 1rem; }
 }
-
 @media (max-width: 480px) {
     .results-info  { flex-direction: column; align-items: flex-start; }
     .app-container { padding: 0 0.9rem 2rem; }
