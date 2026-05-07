@@ -31,13 +31,30 @@
   "arquivo": "9 - 1 parte-Violoncelo.pdf",
   "atualizado": false
 },
+  { 
+  "numero": "9",
+  "parte": "1ª Parte",
+  "instrumento": "Oboé",
+  "categoria": "1a_parte",
+  "arquivo": "9 - 1 parte-Oboé.pdf",
+  "atualizado": false
+  },
+  {
+  "numero": "9",
+  "parte": "1ª Parte",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "1a_parte",
+  "arquivo": "9 - 1 parte-Clarinete_em_Bb.pdf",
+  "atualizado": false
+    
+  },
 {
   "numero": "9",
   "parte": "1ª Parte",
   "instrumento": "Regente",
   "categoria": "1a_parte",
   "arquivo": "9 - 1 parte.pdf",
-  "atualizado": false
+  "atualizado": true
 },
 {
   "numero": "9",
