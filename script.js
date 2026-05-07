@@ -186,20 +186,22 @@ if (themeToggle) {
 
     // ========== FUNÇÕES DOS AVISOS ==========
 
-// Função para contar avisos visíveis e atualizar o contador
+// ========== SISTEMA DE AVISOS ==========
+
+// Função para contar avisos visíveis
 function updateNoticesCount() {
     const noticesList = document.getElementById('noticesList');
     const noticesCount = document.getElementById('noticesCount');
     
     if (!noticesList || !noticesCount) return;
     
-    // Conta apenas avisos que NÃO estão ocultos (filtra se tiver classe 'hidden')
+    // Conta apenas avisos que NÃO estão ocultos
     const visibleNotices = document.querySelectorAll('#noticesList .notice-card:not(.hidden)');
     const count = visibleNotices.length;
     
     noticesCount.textContent = count;
     
-    // Se não houver avisos, mostra 0 e pode esconder a seção se quiser
+    // Se não houver avisos, mostra 0 com opacidade menor
     if (count === 0) {
         noticesCount.style.opacity = '0.5';
     } else {
@@ -207,7 +209,7 @@ function updateNoticesCount() {
     }
 }
 
-// Função para alternar (mostrar/ocultar) a lista de avisos
+// Função para alternar (mostrar/ocultar) os avisos
 function toggleNotices() {
     const noticesList = document.getElementById('noticesList');
     const toggleBtn = document.getElementById('noticesToggleBtn');
@@ -225,7 +227,7 @@ function toggleNotices() {
     }
 }
 
-// Função para carregar o estado salvo dos avisos (se ficou oculto ou visível)
+// Função para carregar o estado salvo
 function loadNoticesState() {
     const noticesList = document.getElementById('noticesList');
     const toggleBtn = document.getElementById('noticesToggleBtn');
@@ -234,7 +236,6 @@ function loadNoticesState() {
     
     const savedState = localStorage.getItem('noticesVisible');
     
-    // Se nunca foi salvo, padrão = visível (true)
     if (savedState === 'false') {
         noticesList.classList.add('hidden');
         toggleBtn.textContent = 'Mostrar';
@@ -244,24 +245,35 @@ function loadNoticesState() {
     }
 }
 
-// Inicializar avisos quando a página carregar
+// Inicializar avisos
 function initNotices() {
     updateNoticesCount();
     loadNoticesState();
     
-    // Adiciona evento de clique no header dos avisos
-    const header = document.querySelector('.notices-header');
+    // Adiciona evento de clique no header
+    const header = document.getElementById('noticesHeader');
+    const toggleBtn = document.getElementById('noticesToggleBtn');
+    
     if (header) {
-        header.onclick = function(e) {
-            // Evita que o clique no botão dispare duas vezes
-            if (e.target.closest('#noticesToggleBtn')) return;
+        header.addEventListener('click', function(e) {
+            // Se clicou no botão, não faz nada (o botão tem seu próprio evento)
+            if (e.target === toggleBtn || toggleBtn.contains(e.target)) {
+                return;
+            }
             toggleNotices();
-        };
+        });
+    }
+    
+    // Evento separado para o botão
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Impede que o clique no botão ative o header também
+            toggleNotices();
+        });
     }
 }
 
-// Chame esta função na inicialização (junto com as outras)
-// Adicione esta linha no final da função que carrega a página ou chame assim:
+// Inicializa quando a página carregar
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initNotices);
 } else {
@@ -269,6 +281,3 @@ if (document.readyState === 'loading') {
 }
 }
 
-// Inicializar
-initTheme();
-loadHinos();
