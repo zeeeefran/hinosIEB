@@ -187,7 +187,7 @@ body {
 .notices-toggle:hover { color: var(--text-primary); }
 
 .notices-list { display: flex; flex-direction: column; gap: 0.65rem; }
-.notices-list.collapsed { display: none; }
+.notices-list.hidden { display: none; }
 
 .notice-card {
     background: var(--bg-card);
