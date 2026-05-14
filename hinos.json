@@ -255,5 +255,77 @@
   "categoria": "avulsos",
   "arquivo": "Bendito e Santo.pdf",
   "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Trompete em C",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Viola",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Violino 1",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Violino 2",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Violoncelo",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Violoncelo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Regente",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "O Senhor é Meu Pastor",
+  "parte": "Avulso",
+  "instrumento": "Oboé",
+  "categoria": "avulsos",
+  "arquivo": "O Senhor é Meu Pastor-Oboé.pdf",
+  "atualizado": false
+},
+{
+    "numero": "521",
+    "parte": "3ª Parte",
+    "instrumento":"Órgão/Coro",
+    "categoria": "3a_parte",
+    "arquivo": "521 - 3ª Parte (A Cidade Santa).pdf",
+    "atualizado": false
 }
 ]
