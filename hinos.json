@@ -399,5 +399,53 @@
   "categoria": "avulsos",
   "arquivo": "Salmo 66.pdf",
   "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Viola",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Viola.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Clarinete em Bb",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Clarinete_em_Bb.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Trompete em C",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Trompete_em_C.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Oboé",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Oboé.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Violino 2",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Violino_2.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Regente",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte.pdf",
+    "atualizado": false
   }
 ]
