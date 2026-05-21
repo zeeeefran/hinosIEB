@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>IEB - Biblioteca de Partituras</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -14,92 +14,78 @@
         <header class="header">
             <div class="header-content">
                 <div class="logo-area">
-                    <i class="fas fa-music"></i>
+                    <i class="fas fa-music" aria-hidden="true"></i>
                     <h1>Hinos da <span>IEB</span></h1>
                 </div>
                 <p class="subtitle">Biblioteca Digital de Partituras</p>
             </div>
-             <p class="subtitle">Glória ao REI JESUS!</p>
+            <div class="header-actions">
+                <p class="header-gloria">Glória ao REI JESUS!</p>
+                <button id="themeToggle" class="theme-btn" aria-label="Alternar modo claro e escuro">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
         </header>
 
-        <!-- ==========================================
-             AVISOS
-             Para adicionar um aviso, copie um bloco
-             <div class="notice-card type-???"> abaixo.
+        <!-- Versículo bíblico -->
+        <div class="verse-banner" aria-label="Versículo bíblico">
+            <i class="fas fa-cross verse-icon" aria-hidden="true"></i>
+            <p class="verse-text">"Cantai ao Senhor um cântico novo, cantai ao Senhor, toda a terra."</p>
+            <span class="verse-ref">Salmos 96:1</span>
+        </div>
 
-             Tipos disponíveis (troque o type-???):
-               type-ensaio  → azul   (datas de ensaio)
-               type-novo    → verde  (novas partituras)
-               type-aviso   → laranja (avisos importantes)
-               type-info    → cinza-azul (informações gerais)
-
-             Ícones sugeridos (troque o fa-???):
-               fa-calendar-day  → datas
-               fa-music         → partituras
-               fa-triangle-exclamation → avisos
-               fa-circle-info   → informações
-        =========================================== -->
         <!-- ========== SEÇÃO DE AVISOS ========== -->
-<section class="notices-section">
-    <div class="notices-header" id="noticesHeader">
-        <i class="fas fa-bell"></i>
-        <h2>Avisos</h2>
-        <span class="notices-count" id="noticesCount">0</span>
-        <button class="notices-toggle" id="noticesToggleBtn" aria-label="Mostrar/ocultar avisos">
-            Ocultar
-        </button>
-    </div>
-
-    <div class="notices-list" id="noticesList">        
-        <!-- AVISO 2 -->
-        <div class="notice-card type-aviso">
-            <i class="fas fa-triangle-exclamation notice-icon"></i>
-            <div class="notice-body">
-                <p class="notice-title">Hinos para dia 31/05 (culto)</p>
-                <p class="notice-text">1ª Parte: <br>
-9<br><br>
-2ª Parte:<br>
-578<br><br>
-3ª Parte:<br>
-1<br>
-171<br>
-322<br>
-323<br><br>
-Avulsos:<br>
-Bendito e Santo<br>
-O Reino de Deus na Terra<br>
-O Senhor é Meu Pastor<br>
-Sonda-me, Ó Deus</p>
-
-                <span class="notice-date">
-                    <i class="fas fa-clock"></i> Adicionado em 18/05/2026
-                </span>
+        <section class="notices-section" aria-label="Avisos">
+            <div class="notices-header" id="noticesHeader">
+                <i class="fas fa-bell" aria-hidden="true"></i>
+                <h2>Avisos</h2>
+                <span class="notices-count" id="noticesCount">0</span>
+                <button class="notices-toggle" id="noticesToggleBtn" aria-label="Mostrar ou ocultar avisos">
+                    Ocultar
+                </button>
             </div>
-        </div>
-        <div class="notice-card type-ensaio">
-            <i class="fas fa-calendar-day notice-icon"></i>
-            <div class="notice-body">
-                <p class="notice-title">Ensaio — Sábado, 23/05</p>
-                <p class="notice-text">Ensaio às 17h. Trazer partituras dos hinos.</p>
-                <span class="notice-date">
-                    <i class="fas fa-clock"></i> Adicionado em 18/05/2026
-                </span>
-            </div>
-        </div>
-        <div class="notice-card type-ensaio">
-            <i class="fas fa-calendar-day notice-icon"></i>
-            <div class="notice-body">
-                <p class="notice-title">Ensaio — Sexta, 29/05</p>
-                <p class="notice-text">Ensaio às 19h20. Trazer partituras dos hinos.</p>
-                <span class="notice-date">
-                    <i class="fas fa-clock"></i> Adicionado em 18/05/2026
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
 
-                <!-- 
+            <div class="notices-list" id="noticesList">
+                <!-- AVISO 1 -->
+                <div class="notice-card type-aviso">
+                    <i class="fas fa-triangle-exclamation notice-icon" aria-hidden="true"></i>
+                    <div class="notice-body">
+                        <p class="notice-title">Hinos para dia 31/05 (culto)</p>
+                        <p class="notice-text">
+                            1ª Parte: 9<br><br>
+                            2ª Parte: 578<br><br>
+                            3ª Parte: 1 · 171 · 322 · 323<br><br>
+                            Avulsos: Bendito e Santo · O Reino de Deus na Terra · O Senhor é Meu Pastor · Sonda-me, Ó Deus
+                        </p>
+                        <span class="notice-date">
+                            <i class="fas fa-clock" aria-hidden="true"></i> Adicionado em 18/05/2026
+                        </span>
+                    </div>
+                </div>
+                <!-- AVISO 2 -->
+                <div class="notice-card type-ensaio">
+                    <i class="fas fa-calendar-day notice-icon" aria-hidden="true"></i>
+                    <div class="notice-body">
+                        <p class="notice-title">Ensaio — Sábado, 23/05</p>
+                        <p class="notice-text">Ensaio às 17h. Trazer partituras dos hinos.</p>
+                        <span class="notice-date">
+                            <i class="fas fa-clock" aria-hidden="true"></i> Adicionado em 18/05/2026
+                        </span>
+                    </div>
+                </div>
+                <!-- AVISO 3 -->
+                <div class="notice-card type-ensaio">
+                    <i class="fas fa-calendar-day notice-icon" aria-hidden="true"></i>
+                    <div class="notice-body">
+                        <p class="notice-title">Ensaio — Sexta, 29/05</p>
+                        <p class="notice-text">Ensaio às 19h20. Trazer partituras dos hinos.</p>
+                        <span class="notice-date">
+                            <i class="fas fa-clock" aria-hidden="true"></i> Adicionado em 18/05/2026
+                        </span>
+                    </div>
+                </div>
+
+                <!--
                     MODELO PARA NOVO AVISO — copie e cole acima:
 
                 <div class="notice-card type-info">
@@ -113,45 +99,50 @@ Sonda-me, Ó Deus</p>
                     </div>
                 </div>
                 -->
-
             </div>
         </section>
         <!-- ========== FIM DOS AVISOS ========== -->
 
         <div class="search-section">
             <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Buscar por número, instrumento ou parte...">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar por número, instrumento ou parte..."
+                    aria-label="Buscar partituras por número, instrumento ou parte"
+                    autocomplete="off"
+                >
                 <button id="clearSearch" class="clear-btn" aria-label="Limpar busca">
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
 
-        <div class="categories-section">
+        <div class="categories-section" role="navigation" aria-label="Filtro por categoria">
             <div class="tabs-container">
-                <button class="tab-btn active" data-category="all">
-                    <i class="fas fa-th-large"></i>
+                <button class="tab-btn active" data-category="all" aria-pressed="true">
+                    <i class="fas fa-th-large" aria-hidden="true"></i>
                     <span>Todos</span>
                 </button>
-                <button class="tab-btn" data-category="1a_parte">
-                    <i class="fas fa-1"></i>
+                <button class="tab-btn" data-category="1a_parte" aria-pressed="false">
+                    <i class="fas fa-1" aria-hidden="true"></i>
                     <span>1ª Parte</span>
                 </button>
-                <button class="tab-btn" data-category="2a_parte">
-                    <i class="fas fa-2"></i>
+                <button class="tab-btn" data-category="2a_parte" aria-pressed="false">
+                    <i class="fas fa-2" aria-hidden="true"></i>
                     <span>2ª Parte</span>
                 </button>
-                <button class="tab-btn" data-category="3a_parte">
-                    <i class="fas fa-3"></i>
+                <button class="tab-btn" data-category="3a_parte" aria-pressed="false">
+                    <i class="fas fa-3" aria-hidden="true"></i>
                     <span>3ª Parte</span>
                 </button>
-                <button class="tab-btn" data-category="avulsos">
-                    <i class="fas fa-file-alt"></i>
+                <button class="tab-btn" data-category="avulsos" aria-pressed="false">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
                     <span>Avulsos</span>
                 </button>
-                <button class="tab-btn" data-category="canticos">
-                    <i class="fas fa-church"></i>
+                <button class="tab-btn" data-category="canticos" aria-pressed="false">
+                    <i class="fas fa-church" aria-hidden="true"></i>
                     <span>Cânticos</span>
                 </button>
             </div>
@@ -160,14 +151,14 @@ Sonda-me, Ó Deus</p>
         <div class="results-info">
             <span id="resultCount"></span>
             <div class="last-update">
-                <i class="fas fa-sync-alt"></i>
+                <i class="fas fa-sync-alt" aria-hidden="true"></i>
                 <span id="lastCommitDate">Carregando...</span>
             </div>
         </div>
 
-        <main class="sheet-music-grid" id="sheetMusicGrid">
+        <main class="sheet-music-grid" id="sheetMusicGrid" aria-label="Lista de partituras">
             <div class="loading-spinner">
-                <i class="fas fa-spinner fa-pulse"></i>
+                <i class="fas fa-spinner fa-pulse" aria-hidden="true"></i>
                 <p>Carregando partituras...</p>
             </div>
         </main>
@@ -175,6 +166,7 @@ Sonda-me, Ó Deus</p>
         <footer class="footer">
             <p>© 2025 IEB — Todas as partituras são de uso exclusivo da igreja</p>
             <p>Clique em qualquer partitura para abrir o PDF</p>
+            <p class="footer-verse">"Fala entre vós com salmos, hinos e cânticos espirituais" — Ef 5:19</p>
         </footer>
 
     </div>
