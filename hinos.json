@@ -2,7 +2,7 @@
   {
     "numero": "9",
     "parte": "1ª parte",
-    "instrumento": "Violino",
+    "instrumento": "Violino 1",
     "categoria": "1a_parte",
     "arquivo": "9 - 1 parte-Violino.pdf",
     "atualizado": true
@@ -435,9 +435,25 @@
   {
     "numero": "322",
     "parte": "3ª Parte",
+    "instrumento": "Violino 1",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Violino_1.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
     "instrumento": "Violino 2",
     "categoria": "3a_parte",
     "arquivo": "322 - 3ª Parte-Violino_2.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "322",
+    "parte": "3ª Parte",
+    "instrumento": "Violoncelo",
+    "categoria": "3a_parte",
+    "arquivo": "322 - 3ª Parte-Violoncelo.pdf",
     "atualizado": false
   },
   {
