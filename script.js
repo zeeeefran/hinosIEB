@@ -73,7 +73,36 @@ function filterHinos() {
 }
 
 // =========================================================
-// Renderizar cards de partituras
+// Auxiliar: título de exibição do hino (número ou nome)
+// =========================================================
+function hinoDisplayTitle(numero) {
+    // Números puramente numéricos (ex.: "143") viram "Hino 143".
+    // Nomes (avulsos/cânticos sem número, ex.: "O Senhor é Meu Pastor") ficam como estão.
+    return /^\d+$/.test(numero.trim()) ? `Hino ${numero}` : numero;
+}
+
+// =========================================================
+// Agrupar hinos filtrados por número (ou nome, quando não numérico)
+// =========================================================
+function groupHinosByNumero(filtered) {
+    const groups = [];
+    const groupIndex = new Map();
+
+    filtered.forEach(hino => {
+        const key = hino.numero;
+        if (!groupIndex.has(key)) {
+            const group = { numero: hino.numero, parte: hino.parte, itens: [] };
+            groupIndex.set(key, group);
+            groups.push(group);
+        }
+        groupIndex.get(key).itens.push(hino);
+    });
+
+    return groups;
+}
+
+// =========================================================
+// Renderizar cards de partituras (agrupados por hino)
 // =========================================================
 function renderHinos() {
     if (!sheetMusicGrid) return;
@@ -88,28 +117,42 @@ function renderHinos() {
                 <p>Tente outro número, instrumento ou parte</p>
             </div>
         `;
-        if (resultCountSpan) resultCountSpan.textContent = '0 resultados';
+        if (resultCountSpan) resultCountSpan.textContent = '0 hinos encontrados';
         return;
     }
 
+    const groups = groupHinosByNumero(filtered);
+
     if (resultCountSpan) {
-        resultCountSpan.textContent = `${filtered.length} ${filtered.length === 1 ? 'resultado' : 'resultados'}`;
+        resultCountSpan.textContent = `${groups.length} ${groups.length === 1 ? 'hino encontrado' : 'hinos encontrados'}`;
     }
 
-    sheetMusicGrid.innerHTML = filtered.map(hino => {
-        const pdfPath = `pdfs/${hino.categoria}/${hino.arquivo}`;
-        return `
-            <div class="sheet-card" data-pdf="${pdfPath}" data-numero="${hino.numero}" data-instrumento="${hino.instrumento}">
-                <div class="card-info">
-                    <div class="card-details">
-                        <span class="badge">${hino.parte}</span>
-                        <span class="badge instrument-badge">${hino.instrumento}</span>
-                        ${hino.atualizado ? '<span class="badge update-badge"><i class="fas fa-star"></i> Atualizado</span>' : ''}
+    sheetMusicGrid.innerHTML = groups.map(group => {
+        const cards = group.itens.map(hino => {
+            const pdfPath = `pdfs/${hino.categoria}/${hino.arquivo}`;
+            return `
+                <div class="sheet-card" data-pdf="${pdfPath}" data-numero="${hino.numero}" data-instrumento="${hino.instrumento}">
+                    <div class="card-info">
+                        <div class="card-details">
+                            <span class="instrument-name">${hino.instrumento}</span>
+                            ${hino.atualizado ? '<span class="badge update-badge"><i class="fas fa-star"></i> Atualizado</span>' : ''}
+                        </div>
                     </div>
-                    <div class="card-number">${hino.numero.includes('Reino') ? hino.numero : 'Hino ' + hino.numero}</div>
+                    <div class="card-action">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
                 </div>
-                <div class="card-action">
-                    <i class="fas fa-chevron-right"></i>
+            `;
+        }).join('');
+
+        return `
+            <div class="hino-group">
+                <div class="hino-group-header">
+                    <span class="hino-group-number">${hinoDisplayTitle(group.numero)}</span>
+                    <span class="hino-group-part badge">${group.parte}</span>
+                </div>
+                <div class="hino-group-grid">
+                    ${cards}
                 </div>
             </div>
         `;
