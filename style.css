@@ -277,8 +277,19 @@ body {
     border-color: var(--border-strong);
 }
 
-.notices-list { display: flex; flex-direction: column; gap: 0.65rem; }
-.notices-list.hidden { display: none; }
+.notices-list {
+    display: flex; flex-direction: column; gap: 0.65rem;
+    max-height: 2000px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height var(--transition), opacity var(--transition), margin var(--transition);
+}
+.notices-list.hidden {
+    max-height: 0;
+    opacity: 0;
+    gap: 0;
+    pointer-events: none;
+}
 
 .notice-card {
     background: var(--bg-card);
@@ -574,13 +585,84 @@ body {
 .last-update { display: flex; align-items: center; gap: 0.4rem; }
 .last-update i { font-size: 0.68rem; }
 
-/* ============ Grid de partituras ============ */
+/* ============ Grid de partituras (lista de grupos por hino) ============ */
 .sheet-music-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
     margin-bottom: 3rem;
     flex: 1;
+}
+
+/* ============ Grupo por número de hino ============ */
+.hino-group {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.1rem 1.25rem 1.35rem;
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+.hino-group-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.hino-group-number {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.4px;
+    line-height: 1.1;
+}
+
+.hino-group-part {
+    background: var(--accent);
+    color: #fff;
+    border-color: transparent;
+    font-weight: 700;
+    font-size: 0.67rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    padding: 0.3rem 0.75rem;
+}
+
+.hino-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.7rem;
+}
+
+/* Cards de instrumento menores dentro do grupo */
+.hino-group-grid .sheet-card {
+    padding: 0.85rem 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    min-height: 4.5rem;
+}
+.hino-group-grid .card-info { gap: 0.4rem; width: 100%; }
+.hino-group-grid .card-details {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem;
+    order: 0;
+}
+.instrument-name {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.hino-group-grid .card-action {
+    align-self: flex-end;
+    width: 1.7rem; height: 1.7rem;
+    font-size: 0.76rem;
 }
 
 .sheet-card {
@@ -729,10 +811,14 @@ body {
 
     .instrument-btn { padding: 0.55rem 0.75rem; font-size: 0.76rem; }
 
-    .sheet-music-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+    .sheet-music-grid { gap: 0.85rem; }
     .notice-card { padding: 0.9rem 1rem; }
     .card-number { font-size: 1.4rem; }
     .sheet-card  { padding: 1.1rem 1.1rem 1.1rem 1.3rem; }
+
+    .hino-group { padding: 0.95rem 1rem 1.1rem; }
+    .hino-group-number { font-size: 1.25rem; }
+    .hino-group-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
 
     .musescore-item { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
     .musescore-download { align-self: flex-end; }
@@ -743,4 +829,7 @@ body {
     .results-info  { flex-direction: column; align-items: flex-start; }
     .header-actions { gap: 0.6rem; }
     .header-gloria { display: none; }
+
+    .hino-group-grid { grid-template-columns: 1fr; }
+    .hino-group-header { flex-direction: row; }
 }
