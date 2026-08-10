@@ -1,4 +1,509 @@
 [
+  
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Contrabaixo",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Trompete em C",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Viola",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 1",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 2",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Violoncelo",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Violoncelo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Regente",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Oboé",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Contrabaixo",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Violoncelo",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Violoncelo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Regente",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Oboé",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Trompete em C",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Viola",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 1",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "299",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 2",
+  "categoria": "3a_parte",
+  "arquivo": "299 - 3ª Parte-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Contrabaixo",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Trompete em C",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Viola",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 1",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 2",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Violoncelo",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Violoncelo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Regente",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "419",
+  "parte": "3ª Parte",
+  "instrumento": "Oboé",
+  "categoria": "3a_parte",
+  "arquivo": "419 - 3ª Parte-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Contrabaixo",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Viola",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Violino 1",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Violino 2",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Violoncelo",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Violoncelo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Regente",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Oboé",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Graças Rendamos",
+  "parte": "Avulso",
+  "instrumento": "Trompete em C",
+  "categoria": "avulsos",
+  "arquivo": "Graças Rendamos-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Contrabaixo",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Oboé",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Trompete em C",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Viola",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 1",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Violino 2",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Violoncelo",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Violoncelo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "47",
+  "parte": "3ª Parte",
+  "instrumento": "Regente",
+  "categoria": "3a_parte",
+  "arquivo": "47 - 3ª Parte.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Regente",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Clarinete_em_B.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Contrabaixo",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Oboé",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Trompete em C",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Viola",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Violino 1",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Violino_1.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Violino 2",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Violino_2.pdf",
+  "atualizado": false
+},
+{
+  "numero": "Adorai o Rei do Universo",
+  "parte": "Avulso",
+  "instrumento": "Violoncelo",
+  "categoria": "avulsos",
+  "arquivo": "Adorai o Rei do Universo-Violoncelo.pdf",
+  "atualizado": false
+}  
+,{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Contrabaixo",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Contrabaixo.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Regente",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Clarinete em Bb",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Clarinete_em_Bb.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Oboé",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Oboé.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Trompete em C",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Trompete_em_C.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Viola",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Viola.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Violino 1",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Violino.pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Violino 2",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Violino_(1).pdf",
+  "atualizado": false
+},
+{
+  "numero": "255",
+  "parte": "2ª Parte",
+  "instrumento": "Violoncelo",
+  "categoria": "2a_parte",
+  "arquivo": "255 - 2ª Parte-Violoncelo.pdf",
+  "atualizado": false
+},
   {
     "numero": "Louvai a Deus, Senhor!",
     "parte": "Avulso",
