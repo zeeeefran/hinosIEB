@@ -578,6 +578,14 @@
   {
     "numero": "Louvai a Deus, Senhor!",
     "parte": "Avulso",
+    "instrumento": "Trompete em Bb",
+    "categoria": "avulsos",
+    "arquivo": "Louvai a Deus, Senhor!-Trompete_em_Bb.pdf",
+    "atualizado": false
+  },  
+  {
+    "numero": "Louvai a Deus, Senhor!",
+    "parte": "Avulso",
     "instrumento": "Contrabaixo",
     "categoria": "avulsos",
     "arquivo": "Louvai a Deus, Senhor!-Contrabaixo.pdf",
@@ -621,7 +629,7 @@
     "instrumento": "Violino 2",
     "categoria": "avulsos",
     "arquivo": "Louvai a Deus, Senhor!-Violino_2.pdf",
-    "atualizado": false
+    "atualizado": true
   },
   {
     "numero": "Louvai a Deus, Senhor!",
@@ -629,7 +637,7 @@
     "instrumento": "Regente",
     "categoria": "avulsos",
     "arquivo": "Louvai a Deus, Senhor!.pdf",
-    "atualizado": false
+    "atualizado": true
   },
   {
     "numero": "Louvai a Deus, Senhor!",
