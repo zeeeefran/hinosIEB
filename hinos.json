@@ -12,7 +12,7 @@
     "parte": "2ª Parte",
     "instrumento": "Violino 2",
     "categoria": "2a_parte",
-    "arquivo": "224 2ª Parte - Violino II.pdf",
+    "arquivo": "224 2ª Parte - Violin II.pdf",
     "atualizado": false
 },
 {
@@ -28,7 +28,7 @@
     "parte": "2ª Parte",
     "instrumento": "Violino 1",
     "categoria": "2a_parte",
-    "arquivo": "224- 2 2° Parte - Violino I.pdf",
+    "arquivo": "224- 2 2° Parte - Violin I.pdf",
     "atualizado": false
 },
 {
@@ -59,6 +59,14 @@
     "numero": "286",
     "parte": "2ª Parte",
     "instrumento": "Contrabaixo",
+    "categoria": "2a_parte",
+    "arquivo": "2a - 286 - Contrabaixo.pdf",
+    "atualizado": false
+},
+{
+    "numero": "286",
+    "parte": "2ª Parte",
+    "instrumento": "Violoncelo",
     "categoria": "2a_parte",
     "arquivo": "2a - 286 - Contrabaixo.pdf",
     "atualizado": false
