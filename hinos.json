@@ -1437,7 +1437,15 @@
     "instrumento": "Trompete em C",
     "categoria": "3a_parte",
     "arquivo": "171 -3ª Parte-Trompete_em_C.pdf",
-    "atualizado": false
+    "atualizado": true
+  },
+  {
+    "numero": "171",
+    "parte": "3ª Parte",
+    "instrumento": "Trompete em Bb",
+    "categoria": "3a_parte",
+    "arquivo": "171 -3ª Parte-Trompete_em_Bb.pdf",
+    "atualizado": true
   },
   {
     "numero": "171",
@@ -1461,7 +1469,7 @@
     "instrumento": "Violino 2",
     "categoria": "3a_parte",
     "arquivo": "171 -3ª Parte-Violino_2.pdf",
-    "atualizado": false
+    "atualizado": true
   },
   {
     "numero": "171",
