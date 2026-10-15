@@ -36,16 +36,19 @@
 
         <!-- ========== SEÇÃO DE AVISOS ========== -->
         <section class="notices-section" aria-label="Avisos">
-            <div class="notices-header" id="noticesHeader">
-                <i class="fas fa-bell" aria-hidden="true"></i>
-                <h2>Avisos</h2>
-                <span class="notices-count" id="noticesCount">0</span>
-                <button class="notices-toggle" id="noticesToggleBtn" aria-label="Mostrar ou ocultar avisos">
-                    Ocultar
-                </button>
-            </div>
+    <div class="notices-header" id="noticesHeader">
+        <i class="fas fa-bell" aria-hidden="true"></i>
+        <h2>Avisos</h2>
+        <span class="notices-count" id="noticesCount">0</span>
+        <button class="notices-toggle" id="noticesToggleBtn" aria-label="Mostrar ou ocultar avisos">
+            Ocultar
+        </button>
+    </div>
 
-           <div class="notice-card type-aviso">
+    <!-- O ID noticesList DEVE abraçar todos os cards de aviso -->
+    <div class="notices-list" id="noticesList">
+        
+        <div class="notice-card type-aviso">
             <i class="fas fa-triangle-exclamation notice-icon" aria-hidden="true"></i>
             <div class="notice-body">
                 <p class="notice-title">Hinos para dia 18/10 (POUSO ALEGRE) e 25/10 (CURITIBANOS)</p>
@@ -60,6 +63,7 @@
                 </span>
             </div>
         </div>
+
         <div class="notice-card type-ensaio">
             <i class="fas fa-calendar-day notice-icon" aria-hidden="true"></i>
             <div class="notice-body">
@@ -70,7 +74,9 @@
                 </span>
             </div>
         </div>
-        </section>
+
+    </div> <!-- Fim de noticesList -->
+</section>
         <!-- ========== FIM DOS AVISOS ========== -->
 
         <!-- ========== SEÇÃO MUSESCORE ========== -->
