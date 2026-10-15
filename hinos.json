@@ -1042,6 +1042,14 @@
   {
     "numero": "335",
     "parte": "3ª Parte",
+    "instrumento": "Trompete em Bb",
+    "categoria": "3a_parte",
+    "arquivo": "335 - 3ª Parte-Trompete_em_Bb.pdf",
+    "atualizado": false
+  },
+  {
+    "numero": "335",
+    "parte": "3ª Parte",
     "instrumento": "Viola",
     "categoria": "3a_parte",
     "arquivo": "335 - 3ª Parte-Viola.pdf",
