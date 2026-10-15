@@ -69,8 +69,16 @@
   "instrumento": "Trompete em C",
   "categoria": "3a_parte",
   "arquivo": "112 - 3ª Parte-Trompete_em_C.pdf",
-  "atualizado": false
+  "atualizado": true
 },
+{
+  "numero": "112",
+  "parte": "3ª Parte",
+  "instrumento": "Trompete em Bb",
+  "categoria": "3a_parte",
+  "arquivo": "112 - 3ª Parte-Trompete_em_Bb.pdf",
+  "atualizado": false
+},    
 {
   "numero": "112",
   "parte": "3ª Parte",
@@ -109,7 +117,7 @@
   "instrumento": "Regente",
   "categoria": "3a_parte",
   "arquivo": "112 - 3ª Parte.pdf",
-  "atualizado": false
+  "atualizado": true
 },
 {
   "numero": "112",
