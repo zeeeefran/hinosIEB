@@ -1688,21 +1688,13 @@
     "arquivo": "O Reino de Deus na Terra (partitura do regente).pdf",
     "atualizado": false
   },
-  {
+{
     "numero": "9",
-    "parte": "1ª parte",
-    "instrumento": "Violino",
+    "parte": "1ª Parte",
+    "instrumento": "Contrabaixo",
     "categoria": "1a_parte",
-    "arquivo": "9 - 1 parte-Violino.pdf",
+    "arquivo": "9 - 1 parte-Contrabaixo.pdf",
     "atualizado": true
-  },
-  {
-    "numero": "9",
-    "parte": "1ª parte",
-    "instrumento": "Violino 2",
-    "categoria": "1a_parte",
-    "arquivo": "9 - 1 parte-Violino_2.pdf",
-    "atualizado": false
   },
   {
     "numero": "9",
@@ -1710,7 +1702,7 @@
     "instrumento": "Viola",
     "categoria": "1a_parte",
     "arquivo": "9 - 1 parte-Viola.pdf",
-    "atualizado": false
+    "atualizado": true
   },
   {
     "numero": "9",
@@ -1718,7 +1710,31 @@
     "instrumento": "Violoncelo",
     "categoria": "1a_parte",
     "arquivo": "9 - 1 parte-Violoncelo.pdf",
-    "atualizado": false
+    "atualizado": true
+  },
+  {
+    "numero": "9",
+    "parte": "1ª Parte",
+    "instrumento": "Trompete em Bb",
+    "categoria": "1a_parte",
+    "arquivo": "9 - 1 parte-Trompete_em_Bb.pdf",
+    "atualizado": true
+  },
+  {
+    "numero": "9",
+    "parte": "1ª Parte",
+    "instrumento": "Violino 1",
+    "categoria": "1a_parte",
+    "arquivo": "9 - 1 parte-Violino.pdf",
+    "atualizado": true
+  },
+  {
+    "numero": "9",
+    "parte": "1ª Parte",
+    "instrumento": "Violino 2",
+    "categoria": "1a_parte",
+    "arquivo": "9 - 1 parte-Violino_2.pdf",
+    "atualizado": true
   },
   {
     "numero": "9",
@@ -1726,7 +1742,23 @@
     "instrumento": "Regente",
     "categoria": "1a_parte",
     "arquivo": "9 - 1 parte.pdf",
-    "atualizado": false
+    "atualizado": true
+  },
+  {
+    "numero": "9",
+    "parte": "1ª Parte",
+    "instrumento": "Clarinete em Bb",
+    "categoria": "1a_parte",
+    "arquivo": "9 - 1 parte-Clarinete_em_Bb.pdf",
+    "atualizado": true
+  },
+  {
+    "numero": "9",
+    "parte": "1ª Parte",
+    "instrumento": "Oboé",
+    "categoria": "1a_parte",
+    "arquivo": "9 - 1 parte-Oboé.pdf",
+    "atualizado": true
   },
   {
     "numero": "9",
@@ -1734,6 +1766,6 @@
     "instrumento": "Trompete em C",
     "categoria": "1a_parte",
     "arquivo": "9 - 1 parte-Trompete_em_C.pdf",
-    "atualizado": false
+    "atualizado": true
   }
 ]
